@@ -18,6 +18,7 @@ from Purchase_Successful_Flow_Test import PurchaseSuccessfulFlowTest
 from Purchase_History_Test import run_zoomcat_purchase_history_tests
 from Connection_Flow_Test import run_zoomcat_connection_flow_tests
 from Complaint_Submission_Test import ComplaintSubmissionTest
+from Login_by_Password import run_zoomcat_password_login_tests
 
 def main():
     print("\n=== ZOOMCAT APP AUTOMATION: MAIN TEST RUNNER ===\n")
@@ -109,6 +110,16 @@ def main():
     else:
         print("\nSkipping Logout Test because previous tests did not pass.")
         overall_results['logout'] = 'SKIPPED'
+
+    # 7. Run Login by Password Test (always runs last)
+    try:
+        print("\n[7/7] Running Login by Password Test...")
+        login_by_password_results = run_zoomcat_password_login_tests()
+        overall_results['login_by_password'] = login_by_password_results
+    except Exception as e:
+        print("Login by Password test failed with error:", e)
+        traceback.print_exc()
+        overall_results['login_by_password'] = 'FAILED'
 
     # Final summary
     print("\n=== FINAL SUMMARY ===")

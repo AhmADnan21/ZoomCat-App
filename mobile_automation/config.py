@@ -39,7 +39,7 @@ class Config:
         
         # Purchase Flow Locators
         BUY_TAB = "//android.widget.TextView[@resource-id=\"com.zoomcat.app:id/tabTV\" and @text=\"Buy\"]"
-        PURCHASE_PAGE = "//android.view.View[@content-desc=\"Purchase\"]"
+        PURCHASE_BUTTON = "//android.view.View[@content-desc=\"Purchase\"]"
         GOOGLE_PLAY_IMAGE = "//android.widget.ImageView[@content-desc=\"Google Play\"]"
         ONE_TAP_BUY_BUTTON = "(//android.widget.FrameLayout[@resource-id=\"com.android.vending:id/0_resource_name_obfuscated\"])[8]"
         PURCHASE_SUCCESSFUL_SCREEN = "//android.view.View[@content-desc=\"Purchase successful\"]"

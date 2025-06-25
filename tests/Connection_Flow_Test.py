@@ -164,9 +164,9 @@ def test_connection_flow(driver, report_dir):
             )
             print("Connection timer appeared successfully")
             
-            # Wait for 10 seconds
-            print("Waiting for 10 seconds...")
-            time.sleep(10)
+            # Wait for 5 seconds
+            print("Waiting for 5 seconds...")
+            time.sleep(5)
             
             take_screenshot(driver, "1-3_connection_established", report_dir)
             
@@ -223,9 +223,9 @@ def test_connection_flow(driver, report_dir):
             confirm_button.click()
             print("Confirm button clicked successfully")
             
-            # Wait for 10 seconds
-            print("Waiting for 10 seconds...")
-            time.sleep(10)
+            # Wait for 5 seconds
+            print("Waiting for 5 seconds...")
+            time.sleep(5)
             
             # Verify the connection timer appears again
             connection_timer_again = WebDriverWait(driver, 15).until(
@@ -233,9 +233,9 @@ def test_connection_flow(driver, report_dir):
             )
             print("Connection timer appeared again - IP switch successful")
             
-            # Wait another 10 seconds
-            print("Waiting another 10 seconds...")
-            time.sleep(10)
+            # Wait another 5 seconds
+            print("Waiting another 5 seconds...")
+            time.sleep(5)
             
             take_screenshot(driver, "1-4_ip_switch_completed", report_dir)
             
@@ -265,9 +265,9 @@ def test_connection_flow(driver, report_dir):
             )
             print("Connect button appears - Final disconnection successful")
             
-            # Wait for 10 seconds
-            print("Waiting for 10 seconds...")
-            time.sleep(10)
+            # Wait for 5 seconds
+            print("Waiting for 5 seconds...")
+            time.sleep(5)
             
             take_screenshot(driver, "1-5_final_disconnection", report_dir)
             return True
