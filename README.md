@@ -17,6 +17,7 @@ This repository contains comprehensive automated test scripts for the ZoomCat mo
 ZoomCat_App_GH/
 ├── tests/                          # Test scripts
 │   ├── 00main_test_runner.py      # Main test runner
+│   ├── Login_by_Password.py       # Password-based login testing
 │   ├── Login via Verification Code.py
 │   ├── Logout_Test.py
 │   ├── Purchase_History_Test.py
@@ -83,6 +84,7 @@ python tests/00main_test_runner.py
 
 ### Run specific test:
 ```bash
+python tests/Login_by_Password.py
 python tests/Login via Verification Code.py
 python tests/Purchase_History_Test.py
 python tests/Complaint_Submission_Test.py
@@ -99,32 +101,37 @@ Test reports and screenshots are automatically generated in the `reports/` direc
 
 ## 🔧 Test Scripts Overview
 
-### 1. Login via Verification Code
+### 1. Login by Password
+- Tests username/password-based login functionality
+- Validates authentication success and failure scenarios
+- Comprehensive login flow testing with error handling
+
+### 2. Login via Verification Code
 - Tests email-based login with verification code
 - Validates login success and error scenarios
 - Screenshot capture at each step
 
-### 2. Logout Test
+### 3. Logout Test
 - Tests user logout functionality
 - Verifies proper session termination
 - Validates logout confirmation
 
-### 3. Purchase History Test
+### 4. Purchase History Test
 - Navigates to purchase history section
 - Validates purchase records display
 - Tests filtering and sorting functionality
 
-### 4. Purchase Successful Flow Test
+### 5. Purchase Successful Flow Test
 - Tests complete purchase workflow
 - Validates payment processing
 - Confirms successful purchase completion
 
-### 5. Complaint Submission Test
+### 6. Complaint Submission Test
 - Tests complaint submission form
 - Validates form validation
 - Confirms complaint submission success
 
-### 6. Connection Flow Test
+### 7. Connection Flow Test
 - Tests app initialization
 - Validates connection establishment
 - Screenshots connection status
